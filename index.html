@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Form</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+    <form action="confirmation.html">
+        <fieldset>
+            <legend>Personal Information Section</legend>
+            <br>
+            
+            <label for="firstname">FirstName: </label>
+            <input type="text" id="firstname" placeholder="Enter your first name" required  aria-describedby="firstname-help firstname-error"><br>
+            <span id="firstname-error" role="alert" class="error-text" hidden>First name is required</span>
+            <small id="firstname-help" class="help-text">First name should be legal</small>
+            
+            <br><br>
+            
+            <label for="lastname">LastName: </label>
+            <input type="text" id="lastname" placeholder="Enter your last name" required  aria-describedby="lastname-help lastname-error"><br>
+            <span id="lastname-error" class="error-text" hidden role="alert">Last name is required</span>
+            <small id="lastname-help" class="help-text">Last name should be legal</small>
+
+            <br><br>
+            
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Enter your email" required aria-describedby="email-help email-criteria" ><br>
+            <!-- <span id="email-error" hidden class="error-text" role="alert">Email is required</span> -->
+            <small id="email-help" class="help-text">Your email: </small>
+            <ul id="email-criteria" class="emailCriteria" role="alert">
+                <li id="criteria-emaillength" class="invalid">must be atleast 11 characters long</li>
+                <li id="criteria-@" class="invalid">must have @ sign</li>
+                <li id="criteria-domain" class="invalid">must end like gamil.com</li>
+               
+            </ul>
+
+            
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Account Details Section</legend>
+            <br>
+            <label for="username">UserName: </label>
+            <input type="text" id="username" placeholder="Enter your user-name" required minlength="4" maxlength="15">
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" placeholder="Enter your password"  required aria-describedby="password-help password-criteria" maxlength="12"> <button id="togglePassword">👁️</button>
+            
+            <br>
+            <small id="password-help" class="help-text">Your password must follow the following criteria: </small>
+            <ul id="password-criteria" class="passwordCriteria" role="alert">
+                <li id="criteria-length" class="invalid">Atleast 8 characters long</li>
+                <li id="criteria-uppercase" class="invalid">Atleast one uppercase letter</li>
+                <li id="criteria-lowercase" class="invalid">Atleast one lowercase letter</li>
+                <li id="criteria-number" class="invalid">Atleast one number</li>
+                <li id="criteria-special" class="invalid">Atleast one special character</li>
+            </ul>
+
+          
+          
+            
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Preferences Section</legend>
+            <br>
+            <label>Choose your gender: </label>
+            <br>
+            <input type="radio" id="male"  value="Male" name="gender" required>
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" id="female"  value="Female" name="gender" required>
+            <label for="female">Female</label>
+            <br><br>
+            <label for="interests">Your interests: </label>
+            
+            <input type="checkbox" id="checkbox1" >
+            <label for="checkbox1">Fishing</label>
+            <input type="checkbox" id="checkbox2" >
+            <label for="checkbox2">Cricket</label>
+            <input type="checkbox" id="checkbox3"  >
+            <label for="checkbox3">Badminton</label>
+          
+            
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+                
+            <label for="checkbox4">Accept terms and conditions: </label>
+            <input type="checkbox" id="checkbox4" >
+           
+        
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html> 
+
+
+

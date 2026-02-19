@@ -1,0 +1,79 @@
+   .error-text{
+            color: red;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        
+        input[aria-invalid=true]{
+            animation: justshake 0.3s forwards;
+            border: 2px solid red;
+            
+        }
+        input[aria-invalid=false]{
+            
+            border: 2px solid green;
+            
+           
+        }
+
+        @keyframes justshake {
+            25%{transform: translateX(5px);}
+            50%{transform: translateX(-5px);}
+            75%{transform: translateX(5px);}
+            100%{transform: translateX(-5px);}
+        }
+
+        .help-text{
+            color: dimgray;
+        }
+
+        #password-criteria{
+            list-style: none;
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        #password-criteria li.valid{
+            color: green;
+        }
+        
+        #password-criteria li.valid::before{
+            content: "✓";
+            font-weight: bold;
+        }
+
+        #password-criteria li.invalid::before{
+            content: "✗";
+            font-weight: bold;
+        }
+
+        #password-criteria li.invalid{
+            color: red;
+        }
+
+        #email-criteria{
+            list-style: none;
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        #email-criteria li.valid{
+            color: green;
+        }
+        
+        #email-criteria li.valid::before{
+            content: "✓";
+            font-weight: bold;
+        }
+
+        #email-criteria li.invalid::before{
+            content: "✗";
+            font-weight: bold;
+        }
+
+        #email-criteria li.invalid{
+            color: red;
+        }
+        legend{
+        font-weight: bold;
+        }
